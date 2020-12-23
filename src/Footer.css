@@ -1,0 +1,59 @@
+.fb {
+  background-position: 0 0;
+}
+.fb:hover {
+  background-position: 0 190px;
+}
+.ig {
+  background-position: 0 -38px;
+}
+.quotes {
+  color: #fff;
+}
+.ig:hover {
+  background-position: 0 152px;
+}
+.linkedIn {
+  background-position: 0 -76px;
+}
+.linkedIn:hover {
+  background-position: 0 114px;
+}
+.twitter {
+  background-position: 0 -114px;
+}
+.twitter:hover {
+  background-position: 0 76px;
+}
+.youtube {
+  background-position: 0 -152px;
+}
+.youtube:hover {
+  background-position: 0 38px;
+}
+.footer_div {
+  text-align: center;
+  padding: 20px 0;
+}
+a div {
+  margin-left: 10px;
+  display: inline-block;
+  background-size: 100%;
+  width: 38px;
+  height: 38px;
+}
+.temp {
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) and (min-width: 320px) {
+  .footer_div {
+    padding: 10px 0 15px;
+  }
+  a div {
+    margin-left: 20px;
+  }
+  .quotes {
+    margin-top: 15px;
+    padding: 0 3px;
+  }
+}

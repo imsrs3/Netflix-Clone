@@ -1,0 +1,33 @@
+.nav {
+  position: relative;
+}
+.pic_name {
+  font-size: 3rem;
+  color: #fff;
+  position: fixed;
+  padding: 40px;
+}
+.ratings {
+  font-size: 25px;
+  display: block;
+}
+.slide-container {
+  padding: 10px 0 0;
+}
+.slide-main-body {
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+@media (max-width: 768px) and (min-width: 320px) {
+  .slide-main-body {
+    height: 400px;
+  }
+  .pic_name {
+    font-size: 30px;
+    padding: 20px 10px;
+  }
+  .ratings {
+    font-size: 20px;
+  }
+}
