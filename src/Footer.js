@@ -5,7 +5,7 @@ const socialPic = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/social
 const socialSite ={
     fb: "https://www.facebook.com/imsrs3/",
     ig: "https://www.instagram.com/imsrs3/",
-    linkedIn: "https://www.linkedin.com/in/sanket-raj-singhania-860592b9",
+    linkedIn: "https://www.linkedin.com/in/imsrs3/",
     twitter: "https://twitter.com/imsrs3",
     youtube: "https://m.youtube.com/channel/UCMeZStN_pxPgcqmAgf5dzGw"
 }
