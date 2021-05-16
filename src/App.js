@@ -1,30 +1,53 @@
-import React from "react";
+import React, { useEffect} from "react";
 import "./App.css";
-import Row from "./Row";
-import Banner from "./Banner";
-import SlideRow from "./SlideRow";
-import requests from "./requests";
-import Footer from "./Footer";
-import Nav from "./Nav";
-
+import { useDispatch, useSelector } from "react-redux";
+import { logout, login, selectUser } from "./Features/userSlice"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { auth } from "./firebase";
+const LazyLoginScreen = React.lazy(()=> import("./Screens/LoginScreen"));
+const LazyHomeScreen = React.lazy(()=> import("./Screens/HomeScreen"));
 function App() {
-
+  const user = useSelector(selectUser);
+  const  dispatch = useDispatch();
+   useEffect(() => {
+     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+       if(userAuth){
+         //LOGGED IN
+         dispatch(login({
+           uid: userAuth.uid,
+           email: userAuth.email
+         }))
+       }
+       else{
+         //log out
+         dispatch(logout);
+       }
+     });
+     return unsubscribe;
+   }, [dispatch])
   return (
     <div className="app">
-      <Nav />
-      <Banner />
+      <Router> 
+      <React.Suspense fallback="Loading...">
+   {!user ? (
+           <LazyLoginScreen /> 
+  ):(
+    <Switch>
+    <Route exact path="/">
+ <LazyHomeScreen  />
+ </Route>
      
-     <Row title="Netflix Original" fetchUrl={requests.fetchNetflixOriginals} isLarge/>
-     <SlideRow fetchUrl={requests.fetchNetflixOriginals}/>
-     <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
-     {/* <Row title="Top Rated" fetchUrl={requests.fetchTopRated}/>
-     <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
-     <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
-     <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}/>
-     <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}/>
-     <Row title="Documentaries Movies" fetchUrl={requests.fetchDocumentaries}/> */}
-    <Footer />
-    </div>
+ </Switch>
+  )}
+ 
+ 
+ </React.Suspense> 
+    </Router>
+      </div>
   );
 }
 

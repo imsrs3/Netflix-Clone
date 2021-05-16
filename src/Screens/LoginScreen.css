@@ -1,0 +1,126 @@
+.loginScreen {
+  position: relative;
+  height: 100%;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/7a33204b-893d-4792-8494-b9d6cbc73848/8ed3a98a-e2c2-488d-9583-93634199485d/IN-en-20210502-popsignuptwoweeks-perspective_alpha_website_small.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+.loginScreen-logo {
+  object-fit: contain;
+  position: fixed;
+  left: 0;
+  width: 150px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.login-gradient {
+  width: 100%;
+  height: 120vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.signIn-btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: white;
+  background-color: #e50914;
+  line-height: normal;
+  padding: 7px 17px;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.loginScreen-body {
+  position: absolute;
+  top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+}
+.loginScreen-body > h1 {
+  font-size: 3.125rem;
+  margin-bottom: 1rem;
+}
+.loginScreen-body > h2 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.loginScreen-body > h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.login-input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+.login-input {
+  margin: 20px;
+}
+.get-started {
+  padding: 16px 20px;
+  font-size: 1rem;
+  background-color: #e50914;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+@media (max-width: 768px) and (min-width: 320px) {
+  .loginScreen-logo {
+    width: 125px;
+    padding-left: 5px;
+    top: 5px;
+  }
+
+  .signIn-btn {
+    right: 15px;
+    padding: 7px 10px;
+    top: 15px;
+  }
+  .loginScreen-body {
+    top: 20%;
+    margin: 0;
+    left: 0;
+    right: 0;
+  }
+  .loginScreen-body > h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .loginScreen-body > h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .loginScreen-body > h3 {
+    font-size: 16px;
+  }
+  .login-input > form > input {
+    height: 25px;
+    width: 50%;
+  }
+  .login-input {
+    margin: 10px 0;
+  }
+  .get-started {
+    padding: 14px 15px;
+  }
+}

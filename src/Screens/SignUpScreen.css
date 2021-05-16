@@ -1,0 +1,71 @@
+.signUpScreen {
+  max-width: 300px;
+  padding: 50px 70px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.signUpScreen > form {
+  display: grid;
+  flex-direction: column;
+}
+.signUpScreen > form > h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-align: left;
+}
+.signUpScreen > form > h4 {
+  text-align: left;
+  margin-top: 30px;
+}
+.gray {
+  color: #777;
+}
+.sign-up-now:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.signUpScreen > form > input {
+  margin-bottom: 14px;
+  height: 40px;
+  padding: 5px 15px;
+  border: none;
+  outline-width: 0;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.signUpScreen > form > button {
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #e50914;
+  border: 0;
+  outline: none;
+  padding: 16px 20px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .signUpScreen {
+    padding: 5px 30px 10px;
+  }
+  .signUpScreen > form > h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .signUpScreen > form > h4 {
+    margin-top: 8px;
+  }
+  .signUpScreen > form > input {
+    margin-bottom: 12px;
+    height: 25px;
+    padding: 5px 15px;
+  }
+  .signUpScreen > form > button {
+    padding: 10px 15px;
+    margin-top: 5px;
+  }
+}
